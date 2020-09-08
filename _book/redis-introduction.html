@@ -1,0 +1,761 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>2.redis · 数据库操作指南</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="zhangjunbo">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="redis/redis-install.html" />
+    
+    
+    <link rel="prev" href="mysql/centos-install.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="mysql/SUMMARY.html">
+            
+                <a href="mysql/SUMMARY.html">
+            
+                    
+                    1.MySQL
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="mysql/">
+            
+                <a href="mysql/">
+            
+                    
+                    1.1安装配置
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="mysql/windos-install.html">
+            
+                <a href="mysql/windos-install.html">
+            
+                    
+                    1.1.1windos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="mysql/ubuntu-install.html">
+            
+                <a href="mysql/ubuntu-install.html">
+            
+                    
+                    1.1.2ubuntu
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="mysql/centos-install.html">
+            
+                <a href="mysql/centos-install.html">
+            
+                    
+                    1.1.3centos
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="redis-introduction.html">
+            
+                <a href="redis-introduction.html">
+            
+                    
+                    2.redis
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="redis/redis-install.html">
+            
+                <a href="redis/redis-install.html">
+            
+                    
+                    2.1安装配置
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="redis/redis-windos-install.html">
+            
+                <a href="redis/redis-windos-install.html">
+            
+                    
+                    2.1.1. windos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="redis/redis-ubuntu-install.html">
+            
+                <a href="redis/redis-ubuntu-install.html">
+            
+                    
+                    2.1.2. ubuntu
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="redis/redis-centos-install.html">
+            
+                <a href="redis/redis-centos-install.html">
+            
+                    
+                    2.1.3. centos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="redis/redis-config.html">
+            
+                <a href="redis/redis-config.html">
+            
+                    
+                    2.1.4. config
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="redis/redis-usage.html">
+            
+                <a href="redis/redis-usage.html">
+            
+                    
+                    2.2数据操作
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="redis/redis-string.html">
+            
+                <a href="redis/redis-string.html">
+            
+                    
+                    2.2.1. string
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="redis/redis-key.html">
+            
+                <a href="redis/redis-key.html">
+            
+                    
+                    2.2.2. key
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="redis/redis-hash.html">
+            
+                <a href="redis/redis-hash.html">
+            
+                    
+                    2.2.3. hash
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="redis/redis-list.html">
+            
+                <a href="redis/redis-list.html">
+            
+                    
+                    2.2.4. list
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.5" data-path="redis/redis-set.html">
+            
+                <a href="redis/redis-set.html">
+            
+                    
+                    2.2.5. set
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.6" data-path="redis/redis-zset.html">
+            
+                <a href="redis/redis-zset.html">
+            
+                    
+                    2.2.6.zset
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.7" data-path="redis/redis-scene.html">
+            
+                <a href="redis/redis-scene.html">
+            
+                    
+                    2.2.7.应用场景
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="redis/redis-python.html">
+            
+                <a href="redis/redis-python.html">
+            
+                    
+                    2.3. python-redis
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="redis/redis-python-str.html">
+            
+                <a href="redis/redis-python-str.html">
+            
+                    
+                    2.3.1. redis-str
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" data-path="redis/redis-python-key.html">
+            
+                <a href="redis/redis-python-key.html">
+            
+                    
+                    2.3.2. redis-key
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.3" data-path="redis/redis-python-hash.html">
+            
+                <a href="redis/redis-python-hash.html">
+            
+                    
+                    2.3.3. redis-hash
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.4" data-path="redis/redis-python-list.html">
+            
+                <a href="redis/redis-python-list.html">
+            
+                    
+                    2.3.4. redis-list
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.5" data-path="redis/redis-python-set.html">
+            
+                <a href="redis/redis-python-set.html">
+            
+                    
+                    2.3.5. redis-set
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.6" data-path="redis/redis-python-zset.html">
+            
+                <a href="redis/redis-python-zset.html">
+            
+                    
+                    2.3.6. redis-zset
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.7" data-path="redis/redis-python-hyperlog.html">
+            
+                <a href="redis/redis-python-hyperlog.html">
+            
+                    
+                    2.3.7. redis-hyperlog
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.8" data-path="redis/redis-python-example.html">
+            
+                <a href="redis/redis-python-example.html">
+            
+                    
+                    2.3.8. 应用示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.9" data-path="redis/redis-python-strict.html">
+            
+                <a href="redis/redis-python-strict.html">
+            
+                    
+                    2.3.9. Redis与StrictRedis区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    MongoDB
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="mongo/SUMMARY.html">
+            
+                <a href="mongo/SUMMARY.html">
+            
+                    
+                    1.1安装配置
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="mongo/windos-install.html">
+            
+                <a href="mongo/windos-install.html">
+            
+                    
+                    1.1.1windos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="mongo/ubuntu-install.html">
+            
+                <a href="mongo/ubuntu-install.html">
+            
+                    
+                    1.1.2ubuntu
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="mongo/centos-install.html">
+            
+                <a href="mongo/centos-install.html">
+            
+                    
+                    1.1.3centos
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >2.redis</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="introduction">Introduction</h1>
+<p>All for the purpose not to marry out of love is where bullying</p>
+<p>&#x5316;&#x7528;&#x8FD9;&#x53E5;&#x8BDD;&#xFF1A; &#x6240;&#x6709;&#x4E0D;&#x77E5;&#x5E94;&#x7528;&#x573A;&#x666F;&#x7684;&#x5B66;&#x4E60;&#xFF0C;&#x90FD;&#x662F;&#x778E;&#x5B66;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="mysql/centos-install.html" class="navigation navigation-prev " aria-label="Previous page: 1.1.3centos">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="redis/redis-install.html" class="navigation navigation-next " aria-label="Next page: 2.1安装配置">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"2.redis","level":"1.3","depth":1,"next":{"title":"2.1安装配置","level":"1.3.1","depth":2,"path":"redis/redis-install.md","ref":"redis/redis-install.md","articles":[{"title":"2.1.1. windos","level":"1.3.1.1","depth":3,"path":"redis/redis-windos-install.md","ref":"redis/redis-windos-install.md","articles":[]},{"title":"2.1.2. ubuntu","level":"1.3.1.2","depth":3,"path":"redis/redis-ubuntu-install.md","ref":"redis/redis-ubuntu-install.md","articles":[]},{"title":"2.1.3. centos","level":"1.3.1.3","depth":3,"path":"redis/redis-centos-install.md","ref":"redis/redis-centos-install.md","articles":[]},{"title":"2.1.4. config","level":"1.3.1.4","depth":3,"path":"redis/redis-config.md","ref":"redis/redis-config.md","articles":[]}]},"previous":{"title":"1.1.3centos","level":"1.2.1.3","depth":3,"path":"mysql/centos-install.md","ref":"mysql/centos-install.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","search-plus"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy snowdreams1006","modify_label":"文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"zhangjunbo","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"数据库操作指南","language":"zh-hans","gitbook":"*","description":"数据库操作指南"},"file":{"path":"redis-introduction.md","mtime":"2020-09-01T02:15:31.021Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-01T02:54:09.736Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

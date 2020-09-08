@@ -1,0 +1,20 @@
+{
+    "title": "数据库操作指南",
+    "description": "数据库操作指南",
+    "author": "zhangjunbo",
+    "language": "zh-hans",
+    "root": ".",
+
+    "plugins": [  
+        "chapter-fold",
+        "search-plus"
+    ],
+
+    "pluginsConfig": {
+        "tbfed-pagefooter": {
+          "copyright":"&copy snowdreams1006",
+          "modify_label": "文件修订时间：",
+          "modify_format": "YYYY-MM-DD HH:mm:ss"
+        }
+    }
+}

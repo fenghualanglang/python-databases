@@ -1,0 +1,832 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>2.3.8. 应用示例 · 数据库操作指南</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="zhangjunbo">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="redis-python-strict.html" />
+    
+    
+    <link rel="prev" href="redis-python-hyperlog.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../mysql/SUMMARY.html">
+            
+                <a href="../mysql/SUMMARY.html">
+            
+                    
+                    1.MySQL
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../mysql/">
+            
+                <a href="../mysql/">
+            
+                    
+                    1.1安装配置
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../mysql/windos-install.html">
+            
+                <a href="../mysql/windos-install.html">
+            
+                    
+                    1.1.1windos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../mysql/ubuntu-install.html">
+            
+                <a href="../mysql/ubuntu-install.html">
+            
+                    
+                    1.1.2ubuntu
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="../mysql/centos-install.html">
+            
+                <a href="../mysql/centos-install.html">
+            
+                    
+                    1.1.3centos
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../redis-introduction.html">
+            
+                <a href="../redis-introduction.html">
+            
+                    
+                    2.redis
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="redis-install.html">
+            
+                <a href="redis-install.html">
+            
+                    
+                    2.1安装配置
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="redis-windos-install.html">
+            
+                <a href="redis-windos-install.html">
+            
+                    
+                    2.1.1. windos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="redis-ubuntu-install.html">
+            
+                <a href="redis-ubuntu-install.html">
+            
+                    
+                    2.1.2. ubuntu
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="redis-centos-install.html">
+            
+                <a href="redis-centos-install.html">
+            
+                    
+                    2.1.3. centos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="redis-config.html">
+            
+                <a href="redis-config.html">
+            
+                    
+                    2.1.4. config
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="redis-usage.html">
+            
+                <a href="redis-usage.html">
+            
+                    
+                    2.2数据操作
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="redis-string.html">
+            
+                <a href="redis-string.html">
+            
+                    
+                    2.2.1. string
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="redis-key.html">
+            
+                <a href="redis-key.html">
+            
+                    
+                    2.2.2. key
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="redis-hash.html">
+            
+                <a href="redis-hash.html">
+            
+                    
+                    2.2.3. hash
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="redis-list.html">
+            
+                <a href="redis-list.html">
+            
+                    
+                    2.2.4. list
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.5" data-path="redis-set.html">
+            
+                <a href="redis-set.html">
+            
+                    
+                    2.2.5. set
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.6" data-path="redis-zset.html">
+            
+                <a href="redis-zset.html">
+            
+                    
+                    2.2.6.zset
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.7" data-path="redis-scene.html">
+            
+                <a href="redis-scene.html">
+            
+                    
+                    2.2.7.应用场景
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="redis-python.html">
+            
+                <a href="redis-python.html">
+            
+                    
+                    2.3. python-redis
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="redis-python-str.html">
+            
+                <a href="redis-python-str.html">
+            
+                    
+                    2.3.1. redis-str
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" data-path="redis-python-key.html">
+            
+                <a href="redis-python-key.html">
+            
+                    
+                    2.3.2. redis-key
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.3" data-path="redis-python-hash.html">
+            
+                <a href="redis-python-hash.html">
+            
+                    
+                    2.3.3. redis-hash
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.4" data-path="redis-python-list.html">
+            
+                <a href="redis-python-list.html">
+            
+                    
+                    2.3.4. redis-list
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.5" data-path="redis-python-set.html">
+            
+                <a href="redis-python-set.html">
+            
+                    
+                    2.3.5. redis-set
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.6" data-path="redis-python-zset.html">
+            
+                <a href="redis-python-zset.html">
+            
+                    
+                    2.3.6. redis-zset
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.7" data-path="redis-python-hyperlog.html">
+            
+                <a href="redis-python-hyperlog.html">
+            
+                    
+                    2.3.7. redis-hyperlog
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.3.8" data-path="redis-python-example.html">
+            
+                <a href="redis-python-example.html">
+            
+                    
+                    2.3.8. 应用示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.9" data-path="redis-python-strict.html">
+            
+                <a href="redis-python-strict.html">
+            
+                    
+                    2.3.9. Redis与StrictRedis区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    MongoDB
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../mongo/SUMMARY.html">
+            
+                <a href="../mongo/SUMMARY.html">
+            
+                    
+                    1.1安装配置
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../mongo/windos-install.html">
+            
+                <a href="../mongo/windos-install.html">
+            
+                    
+                    1.1.1windos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../mongo/ubuntu-install.html">
+            
+                <a href="../mongo/ubuntu-install.html">
+            
+                    
+                    1.1.2ubuntu
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../mongo/centos-install.html">
+            
+                <a href="../mongo/centos-install.html">
+            
+                    
+                    1.1.3centos
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >2.3.8. 应用示例</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="238-python&#x64CD;&#x4F5C;redis&#x4E4B;&#x5E94;&#x7528;&#x793A;&#x4F8B;">2.3.8 python&#x64CD;&#x4F5C;redis&#x4E4B;&#x5E94;&#x7528;&#x793A;&#x4F8B;</h3>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> redis
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">RedisDB</span><span class="hljs-params">(object)</span>:</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, conf)</span>:</span>
+        self.conn = redis.Redis(
+            connection_pool=redis.ConnectionPool(
+                host=conf[<span class="hljs-string">&apos;redis_host&apos;</span>],
+                port=conf[<span class="hljs-string">&apos;redis_port&apos;</span>],
+                db=conf[<span class="hljs-string">&apos;redis_db&apos;</span>],
+                password=conf[<span class="hljs-string">&apos;redis_passwd&apos;</span>]
+            )
+        )
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">set</span><span class="hljs-params">(self, key, value, expire=None)</span>:</span>
+        self.conn.set(key, value, expire)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get</span><span class="hljs-params">(self, key)</span>:</span>
+        <span class="hljs-keyword">return</span> self.conn.get(key)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">setex</span><span class="hljs-params">(self, key, expire_time, strval)</span>:</span>
+        <span class="hljs-keyword">return</span> self.conn.setex(key, expire_time, strval)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">scan</span><span class="hljs-params">(self, cursor=<span class="hljs-number">0</span>, match=None, count=None)</span>:</span>
+        data = self.conn.scan(cursor=cursor, match=match, count=count)
+        <span class="hljs-keyword">return</span> data
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">delete</span><span class="hljs-params">(self, key)</span>:</span>
+        self.conn.delete(key)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hdel</span><span class="hljs-params">(self, name, key)</span>:</span>
+        <span class="hljs-keyword">return</span> self.conn.hdel(name, key)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hset</span><span class="hljs-params">(self, name, key, value)</span>:</span>
+        self.conn.hset(name, key, value)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hget</span><span class="hljs-params">(self, key, fields)</span>:</span>
+        <span class="hljs-keyword">return</span> self.conn.hget(key, fields)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hmset</span><span class="hljs-params">(self, key, fields)</span>:</span>
+        self.conn.hmset(key, fields)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hgetall</span><span class="hljs-params">(self, name)</span>:</span>
+        data = self.conn.hgetall(name)
+        data = dict((item[<span class="hljs-number">0</span>].decode(<span class="hljs-string">&apos;utf-8&apos;</span>), item[<span class="hljs-number">1</span>].decode(<span class="hljs-string">&apos;utf-8&apos;</span>)) <span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> data.items()) <span class="hljs-keyword">if</span> data <span class="hljs-keyword">else</span> <span class="hljs-keyword">None</span>
+        <span class="hljs-keyword">return</span> data
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hscan</span><span class="hljs-params">(self, name, cursor=<span class="hljs-number">0</span>, match=None, count=None)</span>:</span>
+        data = self.conn.hscan(name, cursor=cursor, match=match, count=count)
+        <span class="hljs-keyword">return</span> data
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hvals</span><span class="hljs-params">(self, key)</span>:</span>
+        <span class="hljs-keyword">return</span> self.conn.hvals(key)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hkeys</span><span class="hljs-params">(self, key)</span>:</span>
+        <span class="hljs-keyword">return</span> self.conn.hkeys(key)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hdel</span><span class="hljs-params">(self, key, field)</span>:</span>
+        self.conn.hdel(key, field)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">exists</span><span class="hljs-params">(self, key)</span>:</span>
+        <span class="hljs-keyword">return</span> self.conn.exists(key)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hexists</span><span class="hljs-params">(self, name, key)</span>:</span>
+        <span class="hljs-keyword">return</span> self.conn.hexists(name, key)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">delete</span><span class="hljs-params">(self, *names)</span>:</span>
+        <span class="hljs-keyword">return</span> self.conn.delete(*names)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">expire</span><span class="hljs-params">(self, name, time)</span>:</span>
+        <span class="hljs-keyword">return</span> self.conn.expire(name, time)
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="redis-python-hyperlog.html" class="navigation navigation-prev " aria-label="Previous page: 2.3.7. redis-hyperlog">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="redis-python-strict.html" class="navigation navigation-next " aria-label="Next page: 2.3.9. Redis与StrictRedis区别">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"2.3.8. 应用示例","level":"1.3.3.8","depth":3,"next":{"title":"2.3.9. Redis与StrictRedis区别","level":"1.3.3.9","depth":3,"path":"redis/redis-python-strict.md","ref":"redis/redis-python-strict.md","articles":[]},"previous":{"title":"2.3.7. redis-hyperlog","level":"1.3.3.7","depth":3,"path":"redis/redis-python-hyperlog.md","ref":"redis/redis-python-hyperlog.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","search-plus"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy snowdreams1006","modify_label":"文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"zhangjunbo","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"数据库操作指南","language":"zh-hans","gitbook":"*","description":"数据库操作指南"},"file":{"path":"redis/redis-python-example.md","mtime":"2020-08-30T16:53:54.841Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-01T02:54:09.736Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
